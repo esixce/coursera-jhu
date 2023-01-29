@@ -10,11 +10,33 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+/*h1*/
+.replace {
   margin-top: 15px;
   margin-bottom: 15px;
   text-align: center;
   font-size: 1.75em;
+}
+
+#s1 > div, #s2 > div, #s3 > div {
+  position: relative;          /* attached here for 90% */
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+}
+
+#s1 h2:after {
+  content: "Chicken";
+  background-color: blue;
+}
+#s2 h2:after {
+  content: "feasting";
+  background-color: purple;
+}
+#s3 h2:after {
+  content: "maki";
+  background-color: green;
 }
 
 /*H2 top right corner of view*/
@@ -23,13 +45,21 @@ h2 {
   color: white;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.subheader {
   border: 3px solid black;
-  position: absolute;
+  position: absolute;         /* attached to section > div */
   top: 0;
   right: 0;
+}
+
+/**H2 colors**/
+#s1 h2{
+  background-color: blue;
+}
+#s2 h2{
+  background-color: purple;
+}
+#s3 h2{
+  background-color: green;
 }
 
 p {
@@ -38,8 +68,6 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
   max-height: 92px;
-  /*
-*/
   font-size: 1em;
   border: 3px solid black;
   background-color: grey;
@@ -49,29 +77,6 @@ p:hover {
   cursor:ns-resize;
   overflow: scroll;
 }
-
-
-/**H2 colors**/
-#t1 {
-  background-color: blue;
-}
-#t2 {
-  background-color: purple;
-}
-#t3 {
-  background-color: green;
-}
-
-/** **/
-section > div {
-  position: relative;
-  margin-bottom: 15px;
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-  background-clip: border-box;
-}
-
 
 /*
 Desktop   992px <           one row
@@ -89,45 +94,16 @@ Mobile    767px >           column
     width: 95%;
   }
 
-  .row #s3 p {
-    width: 100%;
-  }
-
 }
 
 @media (max-width: 767px) {
 
-  h1 {
+  .replace {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;     /* attached to frame */
     visibility: hidden;
-  }
-
-  h2 {
-    width: 100%;
-    padding: 10px 5px 10px 5px;
-    text-align: center;
-    /*
-    visibility: visible;
-    */
-    visibility: hidden;
-  }
-
-  h2:after {
-    visibility: visible;
-    padding-left: 10px;
-    padding-right: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  #s1 h2:after {
-    content: "fine cuisine chicken chinese fried rice sophisticated broccoli chicken fried";
-  }
-  #s2 h2:after {
-    content: "two sampling adventurous feature both traditional fusion cuisine voracious feasting";
-  }
-  #s3 h2:after {
-    content: "tataki sea urchin grilled blue katsu ocean spicy cod maki";
   }
 
   .replace:after {
@@ -140,21 +116,46 @@ Mobile    767px >           column
     left: 0;
   }
 
-  #header {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
+  h2 {
+    padding: 10px 5px 10px 5px;
+    width: 100%;
+    text-align: center;
+    position: static;
+
+    /*
+    visibility: visible;
+    float: left;
+    */
   }
 
-  p {
+  h2 {
+    border: 3px solid black;
+    position: relative;           /* attached to section > div */
+    top: 0px;
+    left: 0px;
+  }
+
+  #s1 h2:after {
+    content: "fine cuisine chicken chinese fried rice sophisticated broccoli chicken fried";
+    background-color: blue;
+  }
+  #s2 h2:after {
+    content: "two sampling adventurous feature both traditional fusion cuisine voracious feasting";
+    background-color: purple;
+  }
+  #s3 h2:after {
+    content: "tataki sea urchin grilled yellow katsu deliverable spicy authentic maki";
+    background-color: green;
+  }
+  p{
+    position: relative;           /* attached to section > div */
+    top: -3px;
+    left: 0px;
     padding: 15px 15px 15px 15px;
-    max-height: 122px;
+    max-height: 77px;
+    min-height: 77px;
   }
 
-  .subheader {
-    position: relative;
-  }
 }
 
 
