@@ -8,12 +8,13 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: #362706;
 }
 
 /*h1*/
 .replace {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 25px;
+  margin-bottom: 45px;
   text-align: center;
   font-size: 1.75em;
 }
@@ -28,15 +29,15 @@ body {
 
 #s1 h2:after {
   content: "Chicken";
-  background-color: blue;
+  background-color: #362706;
 }
 #s2 h2:after {
-  content: "feasting";
-  background-color: purple;
+  content: "Beef";
+  background-color: #464E2E;
 }
 #s3 h2:after {
-  content: "maki";
-  background-color: green;
+  content: "Sushi";
+  background-color: #ACB992;
 }
 
 /*H2 top right corner of view*/
@@ -45,7 +46,7 @@ h2 {
   color: white;
   padding-left: 10px;
   padding-right: 10px;
-  border: 3px solid black;
+  border: 1px solid #362706;
   position: absolute;         /* attached to section > div */
   top: 0;
   right: 0;
@@ -53,24 +54,24 @@ h2 {
 
 /**H2 colors**/
 #s1 h2{
-  background-color: blue;
+  background-color: #362706;
 }
 #s2 h2{
-  background-color: purple;
+  background-color: #464E2E;
 }
 #s3 h2{
-  background-color: green;
+  background-color: #ACB992;
 }
 
 p {
   padding: 30px 15px 15px 15px;
-  color: white;
+  color: #362706;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 92px;
+  max-height: 88px;
   font-size: 1em;
-  border: 3px solid black;
-  background-color: grey;
+  border: 1px solid #362706;
+  background-color: #E9E5D6;
 }
 
 p:hover {
@@ -117,19 +118,14 @@ Mobile    767px >           column
   }
 
   h2 {
-    padding: 10px 5px 10px 5px;
+    padding: 5px 5px 5px 5px;
     width: 100%;
     text-align: center;
     position: static;
-
-    /*
-    visibility: visible;
-    float: left;
-    */
   }
 
   h2 {
-    border: 3px solid black;
+    border: 1px solid #362706;
     position: relative;           /* attached to section > div */
     top: 0px;
     left: 0px;
@@ -137,23 +133,22 @@ Mobile    767px >           column
 
   #s1 h2:after {
     content: "fine cuisine chicken chinese fried rice sophisticated broccoli chicken fried";
-    background-color: blue;
+    background-color: #362706;
   }
   #s2 h2:after {
     content: "two sampling adventurous feature both traditional fusion cuisine voracious feasting";
-    background-color: purple;
+    background-color: #464E2E;
   }
   #s3 h2:after {
     content: "tataki sea urchin grilled yellow katsu deliverable spicy authentic maki";
-    background-color: green;
+    background-color: #ACB992;
   }
   p{
     position: relative;           /* attached to section > div */
-    top: -3px;
+    top: -1px;
     left: 0px;
     padding: 15px 15px 15px 15px;
-    max-height: 77px;
-    min-height: 77px;
+    max-height: 73px;
   }
 
 }
