@@ -1,0 +1,190 @@
+
+/*
+
+TODO: Color navbar button when active
+
+TODO: Menu Centered using bootstrap class
+
+TODO:
+
+*/
+
+
+body {
+  font-size: 16px;
+  color: #274472;
+  background-color: #C3E0E5;
+  font-family: 'Roboto', sans-serif;
+}
+
+/** HEADER **/
+#header-nav {
+  background-color: #274472;
+  border-radius: 0;
+  border: 0;
+}
+
+.navbar-brand h1 { /* Restaurant name */
+  font-family: 'Roboto', sans-serif;
+  color: #C3E0E5;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  line-height: .75;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #C3E0E5;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #5885AF;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #C3E0E5;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  background: #41729F;
+  margin-top: -50px;
+}
+.navbar-header button.navbar-toggle:hover {
+  background: #5885AF;
+}
+
+/* TODO CHANGE COLOR navbar active*/
+
+/* END HEADER */
+
+
+/*h1*/
+#main-content h1 {
+  font-size: 1.75em;
+}
+
+
+/*H2 top right corner of view*/
+h2 {
+  font-size: 1.25em;
+  color: #C3E0E5;
+  padding: 5px 10px 5px 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/**H2 colors**/
+#s1 h2{
+  background-color: #274472;
+}
+#s2 h2{
+  background-color: #41729F;
+}
+#s3 h2{
+  background-color: #5885AF;
+}
+
+#s1 h2:after {
+  content: "Chicken";
+}
+#s2 h2:after {
+  content: "Beef";
+}
+#s3 h2:after {
+  content: "Sushi";
+}
+
+p {
+  padding: 5px 15px 5px 15px;
+  color: #274472;
+  overflow: hidden;
+  height: auto;
+  font-size: 1em;
+  border: 1px solid #274472;
+  background-color: #E1F9FF;
+}
+
+p:hover {
+  cursor:ns-resize;
+  overflow: scroll;
+}
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  /* End Header */
+
+  p {
+    height: 800px;
+  }
+
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  p {
+    height: 400px;
+  }
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 { /* Restaurant name */
+    padding-top: 10px;
+    font-size: 5vw; /* 1vw = 1% of viewport width */
+  }
+  .navbar-brand p { /* Kosher cert */
+    font-size: .6em;
+    margin-top: 12px;
+  }
+  .navbar-brand p img { /* Star-K */
+    height: 20px;
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+  #xs-deliver {
+    margin-top: 5px;
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  /* End Header */
+  #main-content h1 {
+    font-size: 4vw;
+  }
+
+  h2 {
+    font-size: 3vw;
+  }
+
+  p {
+    font-size: 2.3vw;
+  }
+
+}
