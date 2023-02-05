@@ -1,134 +1,108 @@
 body {
   font-size: 16px;
-  color: #274472;
-  background-color: #C3E0E5;
-  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background-color: #61122f;
+  font-family: 'Oxygen', sans-serif;
 }
 
 /** HEADER **/
 #header-nav {
-  background-color: #274472;
+  background-color: #f6b319;
   border-radius: 0;
   border: 0;
 }
 
-.navbar-brand {
-  max-height: 65px;
+#logo-img {
+  background: url('../images/restaurant-logo_large.png') no-repeat;
+  width: 150px;
+  height: 150px;
+  margin: 10px 15px 10px 0;
 }
+
+.navbar-brand {
+  padding-top: 25px;
+}
+
 .navbar-brand h1 { /* Restaurant name */
-  font-family: 'Roboto', sans-serif;
-  color: #C3E0E5;
+  font-family: 'Lora', serif;
+  color: #557c3e;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 1px 1px 1px #222;
-  line-height: .75;
   margin-top: 0;
   margin-bottom: 0;
+  line-height: .75;
 }
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;
+}
+.navbar-brand p { /* Kosher cert */
+  color: #000;
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-top: 15px;
+}
+.navbar-brand p span { /* Star-K */
+  vertical-align: middle;
 }
 
 #nav-list {
   margin-top: 10px;
 }
 #nav-list a {
-  color: #C3E0E5;
+  color: #951C49;
   text-align: center;
 }
 #nav-list a:hover {
-  background: #5885AF;
+  background: #E7E7E7;
 }
 #nav-list a span {
   font-size: 1.8em;
 }
 
+#phone {
+  margin-top: 5px;
+}
+#phone a { /* Phone number */
+  text-align: right;
+  padding-bottom: 0;
+}
+#phone div { /* We Deliver */
+  color: #557c3e;
+  text-align: right;
+  padding-right: 15px;
+}
+
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid #5885AF;
+  border: 1px solid #61122f;
 }
 .navbar-header button.navbar-toggle {
   clear: both;
-  background: #C3E0E5;
-  margin-top: -50px;
+  margin-top: -30px;
 }
-
-.navbar-header button.navbar-toggle:hover {
-  background: #41729F;
-}
-
-/* UNKNOWN: Color navbar button when active */
-/* UNKNOWN: size navbar mobile */
 /* END HEADER */
-
-
-/*h1*/
-#main-content h2 {
-  font-size: 1.75em;
-}
-
-
-/*H2 top right corner of view*/
-h3 {
-  font-size: 1.25em;
-  color: #C3E0E5;
-  padding: 5px 10px 5px 10px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/**H2 colors**/
-#s1 h3{
-  background-color: #274472;
-}
-#s2 h3{
-  background-color: #41729F;
-}
-#s3 h3{
-  background-color: #5885AF;
-}
-
-#s1 h3:after {
-  content: "Chicken";
-}
-#s2 h3:after {
-  content: "Beef";
-}
-#s3 h3:after {
-  content: "Sushi";
-}
-
-p {
-  padding: 5px 15px 5px 15px;
-  color: #274472;
-  overflow: hidden;
-  height: 800px;
-  font-size: 1em;
-  border: 1px solid #274472;
-  background-color: #E1F9FF;
-}
-
-p:hover {
-  cursor:ns-resize;
-  overflow: scroll;
-}
-
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
+
 }
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
+  #logo-img {
+    background: url('../images/restaurant-logo_medium.png') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
   /* End Header */
 }
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-  p {
-    height: 500px;
-  }
+
 }
 
 /********** Extra small devices only **********/
@@ -149,8 +123,6 @@ p:hover {
   .navbar-brand p img { /* Star-K */
     height: 20px;
   }
-  .navbar-toggle {
-  }
 
   #collapsable-nav a { /* Collapsed nav menu text */
     font-size: 1.2em;
@@ -159,6 +131,16 @@ p:hover {
     font-size: 1em;
     margin-right: 5px;
   }
+
+  #call-btn > a {
+    font-size: 1.5em;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #f6b319;
+    color: #951c49;
+  }
   #xs-deliver {
     margin-top: 5px;
     font-size: .7em;
@@ -166,19 +148,5 @@ p:hover {
     text-transform: uppercase;
   }
   /* End Header */
-
-
-  #main-content h2 {
-    font-size: 4vw;
-  }
-
-  h3 {
-    font-size: 3.5vw;
-  }
-
-  p {
-    font-size: 2.5vw;
-    height: auto;
-  }
 
 }
