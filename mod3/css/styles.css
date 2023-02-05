@@ -102,7 +102,7 @@ p {
   padding: 5px 15px 5px 15px;
   color: #274472;
   overflow: hidden;
-  height: 800px;
+  height: 950px;
   font-size: 1em;
   border: 1px solid #274472;
   background-color: #E1F9FF;
@@ -127,7 +127,10 @@ p:hover {
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
   p {
-    height: 500px;
+    height: 750px;
+  }
+  #s3 p {
+    height: 400px;
   }
 }
 
