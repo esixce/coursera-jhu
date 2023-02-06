@@ -143,7 +143,6 @@ p:hover {
   }
   .navbar-brand h1 { /* Restaurant name */
     padding-top: 10px;
-    font-size: 5vw; /* 1vw = 1% of viewport width */
   }
   .navbar-brand p { /* Kosher cert */
     font-size: .6em;
@@ -170,6 +169,10 @@ p:hover {
   }
   /* End Header */
 
+/*
+  .navbar-brand h1 {
+    font-size: 5vw;
+  }
 
   #main-content h2 {
     font-size: 4vw;
@@ -183,5 +186,5 @@ p:hover {
     font-size: 2.5vw;
     height: auto;
   }
-
+*/
 }
