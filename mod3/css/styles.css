@@ -169,7 +169,11 @@ p:hover {
   }
   /* End Header */
 
-/*
+  p {
+    height: auto;
+  }
+
+  /*
   .navbar-brand h1 {
     font-size: 5vw;
   }
@@ -181,10 +185,9 @@ p:hover {
   h3 {
     font-size: 3.5vw;
   }
-
   p {
     font-size: 2.5vw;
-    height: auto;
   }
+
 */
 }
