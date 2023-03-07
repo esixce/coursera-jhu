@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/mod5/font-awesome-4.7.0/css/font-awesome.min.css">
   </head>
 <body>
   <header>
@@ -17,7 +16,7 @@
       <div class="container">
         <div class="navbar-header">
           <a href="index.html" class="pull-left visible-md visible-lg">
-            <div id="logo-img" alt="Logo image"></div>
+            <div id="logo-img"></div>
           </a>
 
           <div class="navbar-brand">
@@ -43,15 +42,16 @@
                 <span class="glyphicon glyphicon-home"></span> Home</a>
             </li>
             <li id="navMenuButton">
-              <a href="#" onclick="$dc.loadMenuCategories();"> 
+              <a href="#" onclick="$dc.loadMenuCategories();">
                 <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
             </li>
             <li>
-              <a href="#" onclick="$dc.loadAbout();">
+              <a href="#">
                 <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
             </li>
             <li>
-              <a href="#"><span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards</a>
+              <a href="#">
+                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards</a>
             </li>
             <li id="phone" class="hidden-xs">
               <a href="tel:410-602-5008">
@@ -64,7 +64,10 @@
   </header>
 
   <div id="call-btn" class="visible-xs">
-    <a class="btn" href="tel:410-602-5008"><span class="glyphicon glyphicon-earphone"></span>410-602-5008</a>
+    <a class="btn" href="tel:410-602-5008">
+    <span class="glyphicon glyphicon-earphone"></span>
+    410-602-5008
+    </a>
   </div>
   <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
 
