@@ -15,7 +15,7 @@
             const myArray = $scope.items.split(",");
             var size = 0;
                 for (var i = 0; i < myArray.length; i++){
-                    if (myArray[i][0] != null && myArray[i][0] != "" && myArray[i][0] != " ") {
+                    if (myArray[i].trim() != null && myArray[i].trim() != "") {
                         size++;
                     }
                 }
