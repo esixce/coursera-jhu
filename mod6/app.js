@@ -2,9 +2,10 @@
     'use strict';
     
     angular.module('LunchCheck', [])
-    .controller('LunchCheckController', LCController);
+    .controller('LunchCheckController', LunchCheckController);
 
-   function LCController ($scope) {
+    LunchCheckController.$inject = ['$scope'];
+    function LunchCheckController ($scope) {
 
         $scope.items = "";
         $scope.totalItems = 0;
@@ -14,7 +15,6 @@
             const myArray = $scope.items.split(",");
             var size = 0;
                 for (var i = 0; i < myArray.length; i++){
-                    console.log(myArray[i]);
                     if (myArray[i][0] != null && myArray[i][0] != "" && myArray[i][0] != " ") {
                         size++;
                     }
