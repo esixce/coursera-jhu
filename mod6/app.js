@@ -2,26 +2,31 @@
     'use strict';
     
     angular.module('LunchCheck', [])
+    .controller('LunchCheckController', LCController);
 
-    .controller('LunchCheckController', function($scope) {
-        $scope.foodItems = "";
+   function LCController ($scope) {
+
+        $scope.items = "";
         $scope.totalItems = 0;
-        $scope.foodMessage = "";
+        $scope.msg = "";
 
-        $scope.countItems = function () {
-            $scope.totalItems = calculateTotalItems($scope.foodItems);
-            $scope.foodMessage = calculateFoodMessage($scope.totalItems);
-        };
-
-        function calculateTotalItems(string) {
-            const myArray = string.split(",");
-            if (myArray[0][0] == null) {
-                return 0;
-            }
-            return myArray.length;
+        $scope.calculateTotalItems = function () {
+            const myArray = $scope.items.split(",");
+            var size = 0;
+                for (var i = 0; i < myArray.length; i++){
+                    console.log(myArray[i]);
+                    if (myArray[i][0] != null && myArray[i][0] != "" && myArray[i][0] != " ") {
+                        size++;
+                    }
+                }
+            $scope.totalMsg = "Total number of food entries: " + size;
+            return size;
         }
 
-        function calculateFoodMessage(totalItems) {
+        $scope.createResponse = function() {
+            var totalItems = $scope.calculateTotalItems();
+            $scope.setColors(totalItems)
+
             var msg = "";
 
             if (totalItems === 0) {
@@ -31,10 +36,28 @@
             } else {
                 msg = "Too much!";
             }
-
-            return msg;
+            $scope.msg = msg;
         }
 
-    });
+        $scope.inputStyle = {
+            "border": ""
+        }
+        $scope.msgStyle={
+            "color": ""
+        }
+        $scope.setColors = function(totalItems) {
+            if (totalItems === 0) {
+                $scope.msgStyle.color = "red";
+                $scope.inputStyle = {
+                    "border-color": "red"
+                };
+            } else {
+                $scope.msgStyle.color = "green";
+                $scope.inputStyle = {
+                    "border-color": "green"
+                };                
+            }
+        }
+    };
 
 })();

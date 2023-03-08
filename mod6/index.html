@@ -2,7 +2,9 @@
 <html lang="en" ng-app="LunchCheck">
   <head>
     <meta charset="utf-8">
-    <title>Lunch Checker</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+     <title>Lunch Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>.message { font-size: 1.3em; font-weight: bold; }</style>
@@ -14,18 +16,19 @@
              <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control"
-             ng-model="foodItems">
+             ng-model="items"
+             ng-style="inputStyle">
          </div>
-         <div class="form-group">
-             <button class="btn btn-default" ng-click="countItems();">Check If Too Much</button>
+           <div class="form-group">
+             <button class="btn btn-default" ng-click="createResponse();">Check If Too Much</button>
          </div>
-         <div class="form-group message">
+         <div class="form-group message" ng-style="msgStyle">
            <!-- Your message can go here. -->
-           <span>{{foodMessage}}</span>
+           <span>{{msg}}</span>
          </div>
+         <div>
+          <p>{{totalMsg}}</p>
+          <p>Note: empty not considered - "", " ", null</p></div>
    </div>
-
-   <script src="angular.min.js"></script>
-   <script src="app.js"></script>
 </body>
 </html>
